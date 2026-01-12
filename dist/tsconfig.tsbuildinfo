@@ -1,0 +1,1 @@
+{"root":["../types/ws.d.ts","../index.ts","../constants/index.ts","../handlers/websockets.ts","../model/auth.ts","../model/conversation.ts","../model/message.ts","../routes/admin/index.ts","../routes/auth/index.ts","../routes/service/index.ts","../validator/auth/index.ts","../validator/service/index.ts"],"version":"5.7.3"}

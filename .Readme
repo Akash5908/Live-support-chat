@@ -1,0 +1,63 @@
+# Live Chat Support Backend 🚀
+
+Real-time chat backend with **WebSocket**, **JWT auth**, and **role-based rooms** for `candidate`, `agent`, `supervisor`, `admin`. Features Zod validation, bcrypt hashing, hierarchical room access. Perfect for customer support & trading helpdesks.
+
+## ✨ Features
+
+- **Real-time messaging** via WebSocket
+- **4 Role System** with room isolation
+- **JWT Authentication** + refresh tokens
+- **Zod validation** for all endpoints
+- **Bcrypt** secure password hashing
+- **Docker-ready** deployment
+
+## 🛠 Quick Start
+
+### 1. Clone & Install
+```bash
+git clone https://github.com/Akash5908/Live-support-chat.git
+cd live-chat-support-backend
+pnpm i
+```
+
+### 2. Environment Variables
+Create `.env` file:
+```
+MONGO_URI=mongodb://localhost:27017/livechat
+JWT_SECRET=your-super-secret-jwt-key-here
+PORT=3001
+```
+
+### 3. Run Server
+```bash
+pnpm run dev
+```
+
+Server runs on `http://localhost:3000`
+
+## 📁 Project Structure
+```
+├── src/
+│   ├── auth/          # JWT login/signup
+│   ├── websocket/     # Room + role logic
+│   ├── models/        # User, Message schemas
+│   └── routes/
+├── constants/         # Role enums
+├── .env.example
+```
+
+## 🔐 Roles & Permissions
+```
+candidate:    Personal rooms only
+agent:        Candidate + own rooms
+supervisor:   Agent + candidate rooms
+admin:        ALL rooms access
+```
+
+
+**Tech Stack:** Node.js, Express, WebSocket, MongoDB.
+
+
+
+
+
